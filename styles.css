@@ -1,0 +1,300 @@
+/* Global styles */
+body {
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* About section styles */
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin-top: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.about-box {
+    text-align: center;
+}
+
+.icon-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center the icon list horizontally */
+    align-items: center; /* Center the icon list vertically */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Allow the icons to wrap to the next line */
+
+}
+
+.icon-list li {
+    display: inline-block;    
+    margin-left: 35px;
+    margin-right: 35px;
+}
+
+.icon-list img {
+    height: 50px;
+}
+
+/* Projects section styles */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+.project-card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 0;
+    cursor: pointer;
+}
+
+.project-title {
+    font-size: 18px;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.project-card:hover .project-title {
+    opacity: 0;
+}
+
+.project-card:hover .project-details {
+    opacity: 1;
+}
+
+.project-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.project-details .description {
+    font-size: 14px;
+}
+
+/* Section projects styles */
+
+/* Section projects styles */
+.section-project {
+    min-height: 100vh;
+    /* Use min-height to ensure it takes up at least the full viewport height */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-content {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.dashboard-content{
+    margin: auto 10px;
+}
+
+/* Styles specific to project-section-1 */
+#project-section-1 .image-grid {
+    display: flex;
+    /* Use flexbox to have images in a row */
+    flex-wrap: wrap;
+    /* Allow images to wrap to the next row */
+    justify-content: center;
+    /* Center images horizontally */
+    gap: 40px;
+    /* Add some space between images */
+    width: 100%;
+    margin: 30px auto;
+}
+
+#project-section-1 .image-item {
+    flex: 0 1 450px;
+    border: 1px solid #fff;
+
+    /* Allow images to grow to a maximum of 250px in width */
+    max-width: 100%;
+    /* Ensure images don't exceed their container */
+    border-radius: 8px;
+}
+
+#project-section-1 .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Other existing styles for project-section-1 */
+#project-section-1 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-section-1 .project-content {
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+
+
+
+/* Styles specific to project-section-2 */
+#project-section-2 .image-grid {
+    display: flex;
+    /* Use flexbox to have images in a row */
+    flex-wrap: wrap;
+    /* Allow images to wrap to the next row */
+    justify-content: center;
+    /* Center images horizontally */
+    gap: 50px;
+    /* Add some space between images */
+width: 80%;    margin: 30px auto;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    #project-section-2 .image-grid {
+        flex-direction: column;
+        /* Change to a single column for mobile devices */
+        align-items: center;
+        /* Center images vertically */
+    }
+}
+
+#project-section-2 .image-item {
+    flex: 0.3 0 400px;
+    /* Allow images to grow to a maximum of 300px in width */
+    max-width: 100%;
+    /* Ensure images don't exceed their container */
+    border-radius: 8px;
+}
+
+#project-section-2 .image-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Other existing styles for project-section-2 */
+#project-section-2 {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#project-section-2 .project-content {
+    max-width: 900px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/* Media query for responsive image-grid */
+@media screen and (max-width: 768px) {
+    .image-item {
+        flex: 1 0 100%;
+    }
+}
+
+
+
+/* Contact section styles */
+#contact {
+    margin: 100px auto;
+}
+
+
+
+
+
+/* Scroll down arrow */
+
+.arrow-icon {
+    display: none;
+    margin-top: 20px;
+    cursor: pointer;
+    animation: bounce 1.4s infinite;
+    opacity: 0.5;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(0, -10px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .arrow-icon {
+        display: block;
+    }
+}
